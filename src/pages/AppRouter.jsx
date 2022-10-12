@@ -1,30 +1,28 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import Contact from './Contact'
-import Main from './Main'
-import Other from './Other'
-import PrivateRouter from './PrivateRouter'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Contact from "./Contact";
+import Login from "./Login";
+import Main from "./Main";
+import Other from "./Other";
+import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
   return (
     <div>
-        <BrowserRouter>
+      <BrowserRouter>
         <Navbar />
-            <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/other" element ={<PrivateRouter />} >
-
-                  <Route path="" element = {<Other />} />
-                </Route>
-                <Route path="/contact" element ={<Contact />} />
-
-            </Routes>
-
-        
-        </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/other" element={<PrivateRouter />}>
+            <Route path="" element={<Other />} />
+          </Route>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default AppRouter
+export default AppRouter;
