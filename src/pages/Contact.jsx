@@ -1,4 +1,5 @@
 import React from "react";
+import Cards from "../components/Cards";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
@@ -6,9 +7,9 @@ import NewsLetter from "../components/NewsLetter";
 const Contact = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <NewsLetter />
-
+     
       <Footer />
     </div>
   );
