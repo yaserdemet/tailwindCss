@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+ const [person , setPerson] = useState("")
   const [nav, setNav] = useState(false);
+
+  useEffect(() => {
+      setPerson( JSON.parse(sessionStorage.getItem("user")))
+  }, [])
 
   const handleNav = () => {
     setNav(!nav);
@@ -17,12 +22,12 @@ const Navbar = () => {
         <li className='p-4'>Home</li>
         
         </Link>
-        <Link to="/other">
+        <Link to="/private">
         <li className='p-4'>Company</li>
         </Link>
        
         <li className='p-4'>Resources</li>
-        <li className='p-4'>About</li>
+     
         <Link to="/contact">
         <li className='p-4'>Contact</li>
         </Link>

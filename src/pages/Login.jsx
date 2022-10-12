@@ -14,17 +14,16 @@ import { useNavigate } from 'react-router-dom';
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [user , setUser] = useState(sessionStorage.setItem("user" , JSON.stringify(email)))
   const navigate = useNavigate();
 //   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(setUser({ email, password }));
-    sessionStorage.setItem("user" , JSON.stringify(email))
-    setEmail('');
-    setPassword('');
-    // navigate('/');
+    navigate("/private")
+    
   };
+
 
 
   return (

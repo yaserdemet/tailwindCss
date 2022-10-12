@@ -14,7 +14,7 @@ const AppRouter = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/other" element={<PrivateRouter />}>
+          <Route path="/private" element={<PrivateRouter />}>
             <Route path="" element={<Other />} />
           </Route>
           <Route path="/contact" element={<Contact />} />
