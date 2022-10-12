@@ -1,8 +1,13 @@
 import React from 'react'
+import Analytics from '../components/Analytics'
+import Footer from '../components/Footer'
 
 const Other = () => {
   return (
-    <div>Other</div>
+    <div>
+        <Analytics />
+        <Footer />
+    </div>
   )
 }
 
