@@ -48,7 +48,7 @@ const NewsLetter = () => {
               placeholder="enter email"
               value={value}
             />
-            <button onClick={handleChange} className="sm:mx-auto bg-main text-black rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3">
+            <button onClick={handleChange} className="btnCheck">
               Notify Me
             </button>
           </div>
